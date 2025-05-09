@@ -39,8 +39,19 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+       
+
         if (hunger <= 0)
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
             GameOver();
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = false;
+        }
         if (!inCoolDown)
             StartCoroutine(HungerDecrease());
         if (hunger > 100)

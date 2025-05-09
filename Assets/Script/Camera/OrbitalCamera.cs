@@ -15,8 +15,6 @@ public class OrbitalCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = false;
         transform.position = playerPos.position;
 
         localRot.x += Input.GetAxisRaw("Mouse X") * sensitivity;
